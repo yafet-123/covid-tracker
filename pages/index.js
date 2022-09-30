@@ -11,7 +11,7 @@ import { sortData, prettyPrintStat } from "../components/util";
 // import Map from "../components/Map";
 import InfoBox from "../components/InfoBox";
 import numeral from "numeral";
-import LineGraph from "../util/LineGraph";
+import LineGraph from "../components/LineGraph";
 import Table from "../util/Table";
 
 export default function Home() {
