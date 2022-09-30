@@ -43,6 +43,8 @@ code {
 .app__stats {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+
 }
 
 .app__left {
@@ -75,12 +77,9 @@ code {
 }
 
 .infoBox--selected {
-  border-top: 10px solid greenyellow;
+  border-top: 10px solid red;
 }
 
-.infoBox--red {
-  border-color: red;
-}
 
 .infoBox__cases--green {
   color: lightgreen !important;
@@ -107,6 +106,7 @@ code {
   color: #6a5d5d;
   background-color: white;
   height: 400px;
+  width: 100%;
 }
 
 .table tr {

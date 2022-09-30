@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import { useState, useEffect } from "react";
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -66,15 +65,16 @@ export default function Home() {
     };
 
     return (
-        <div className={styles.app}>
+        <div className="">
             <div className="app__left">
                 <div className="app__header">
                     <h1>COVID-19 Tracker</h1>
-                    <FormControl className="app__dropdown">
+                    <FormControl >
                         <Select
                             variant="outlined"
                             value={country}
                             onChange={onCountryChange}
+                            className="app__dropdown"
                         >
                             <MenuItem value="worldwide">Worldwide</MenuItem>
                             {countries.map((country,index) => (
@@ -88,14 +88,15 @@ export default function Home() {
                     <InfoBox
                         onClick={(e) => setCasesType("cases")}
                         title="Coronavirus Cases"
-                        isRed
-                        active={casesType === "cases"}
+                        isRed={casesType != "cases" }
+                        active={casesType === "cases" }
                         cases={prettyPrintStat(countryInfo.todayCases)}
                         total={numeral(countryInfo.cases).format("0.0a")}
                     />
                     <InfoBox
                         onClick={(e) => setCasesType("recovered")}
                         title="Recovered"
+                        isRed={casesType != "recovered"}
                         active={casesType === "recovered"}
                         cases={prettyPrintStat(countryInfo.todayRecovered)}
                         total={numeral(countryInfo.recovered).format("0.0a")}
@@ -103,7 +104,7 @@ export default function Home() {
                     <InfoBox
                         onClick={(e) => setCasesType("deaths")}
                         title="Deaths"
-                        isRed
+                        isRed={casesType != "deaths"}
                         active={casesType === "deaths"}
                         cases={prettyPrintStat(countryInfo.todayDeaths)}
                         total={numeral(countryInfo.deaths).format("0.0a")}
