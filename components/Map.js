@@ -2,8 +2,6 @@ import React from "react";
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 import styles from "../styles/Map.module.css";
 import { showDataOnMap } from "./util";
-
-
 function Map({ countries, casesType, center, zoom }) {
     return (
         <div className={styles.map}>
