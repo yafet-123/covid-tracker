@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { sortData, prettyPrintStat } from "../util/util";
+import { sortData, prettyPrintStat } from "../components/util";
 // import Map from "../components/Map";
 import InfoBox from "../components/InfoBox";
 import numeral from "numeral";
