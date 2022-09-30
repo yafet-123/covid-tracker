@@ -12,7 +12,7 @@ import { sortData, prettyPrintStat } from "../components/util";
 import InfoBox from "../components/InfoBox";
 import numeral from "numeral";
 import LineGraph from "../components/LineGraph";
-import Table from "../util/Table";
+import Table from "../components/Table";
 
 export default function Home() {
     const [country, setInputCountry] = useState("worldwide");
