@@ -8,9 +8,11 @@ import Select from '@mui/material/Select';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { sortData, prettyPrintStat } from "../util/util";
-//import Map from "../util/Map";
+// import Map from "../util/Map";
 import InfoBox from "../util/InfoBox";
 import numeral from "numeral";
+import LineGraph from "../util/LineGraph";
+import Table from "../util/Table";
 
 export default function Home() {
     const [country, setInputCountry] = useState("worldwide");
@@ -109,6 +111,17 @@ export default function Home() {
                 </div>
                 
             </div>
+
+            <Card className="app__right">
+                <CardContent>
+                    <div className="app__information">
+                        <h3>Live Cases by Country</h3>
+                        <Table countries={tableData} />
+                        <h3>Worldwide new {casesType}</h3>
+                        <LineGraph casesType={casesType} />
+                    </div>
+                </CardContent>
+            </Card>
         </div>
     )
 }
